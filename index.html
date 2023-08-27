@@ -21,7 +21,24 @@
         <!-- Google recaptcha -->
         <link rel="preconnect" href="https://www.google.com">
         <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            var onSubmit = function(token) {
+                console.log(token);
+                // You can check token here and decide what to do
+            };
+    
+            var onloadCallback = function() {
+                grecaptcha.render('submitButton', {
+                    'sitekey' : '6LfE59knAAAAAGHBhYACdH8g4rlGLOVHNJzd8avL',
+                    'callback' : onSubmit
+                });
+                document.getElementById('submitButton').disabled = true;
+            };
+    
+            /////
+            // code to enable your button when you have content in the inputs
+            /////
+        </script>        
     </head>
     <body id="page-top">
 
@@ -345,9 +362,7 @@
                                 <label for="message">Additional Details (optional)</label>
                             </div>
                             <!-- Submit Button-->
-                            <div class="g-recaptcha" data-sitekey="6LfE59knAAAAAGHBhYACdH8g4rlGLOVHNJzd8avL"></div>
-                            <br>                            
-                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div>
+                            <div class="d-grid"><input class="g-recaptcha btn btn-primary btn-xl" id="submitButton" type="submit"></input></div>
                         </form>
                     </div>
                 </div>
@@ -370,6 +385,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-
+        <!-- Google reCaptcha -->
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     </body>
 </html>
