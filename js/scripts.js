@@ -82,12 +82,12 @@ window.addEventListener("load", () => {
 
       // Set up our request
       var url = document.URL;
-      //if (url.startsWith("file://")) {
-      //  xhr.open("POST", "http://localhost:7071/api/ContactRequest");
-      //}
-      //else {
+      if (url.startsWith("file://")) {
+        xhr.open("POST", "http://localhost:7071/api/ContactRequest");
+      }
+      else {
         xhr.open("POST", "https://u3alinuxfunctions.azurewebsites.net/api/ContactRequest");
-    //}
+      }
   
       // The data sent is what the user provided in the form
       xhr.send(FD);
