@@ -21,13 +21,15 @@
         <!-- Google recaptcha -->
         <link rel="preconnect" href="https://www.google.com">
         <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-        <!-- Google reCaptcha -->
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty"></script>
         <script>
-            function onSubmit(token) {
-              document.getElementById("contactForm").submit();
-            }
-          </script>
+            grecaptcha.ready(function() {
+                grecaptcha.execute("6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty", {action: "homepage"}).then(function(token) {
+                   document.getElementById("token").value = token;
+                });
+            });
+        </script>
+    
     </head>
 
     <body id="page-top">
@@ -351,17 +353,15 @@
                                 <textarea class="form-control textarea-height" name="message" Title="message" type="text" style="height: 10rem" ></textarea>
                                 <label for="message">Additional Details (optional)</label>
                             </div>
+                            <input type="hidden" id="token" name="token">
                             <!-- Submit Button-->
                             <div class="d-grid">
-                                <button class="g-recaptcha btn btn-primary btn-xl" 
-                                    id="submit" 
-                                    type="submit" 
-                                    title="submit"
+                                <button class="btn btn-primary btn-xl" 
                                     data-sitekey="6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty" 
                                     data-callback='onSubmit' 
                                     data-action='submit'>Submit
                                 </button>
-                            </div>
+                            </div>                    
                         </form>
                     </div>
                 </div>
@@ -384,5 +384,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-    </body>
+        <!-- Google reCaptcha -->
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
 </html>

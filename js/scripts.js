@@ -100,7 +100,10 @@ window.addEventListener("load", () => {
     // Add 'submit' event handler
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-        sendData();
+      sendData();
     });
   });
+
+
+
   
