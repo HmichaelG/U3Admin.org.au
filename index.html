@@ -18,7 +18,10 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-
+        <!-- Google recaptcha -->
+        <link rel="preconnect" href="https://www.google.com">
+        <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
     </head>
     <body id="page-top">
 
@@ -342,7 +345,13 @@
                                 <label for="message">Additional Details (optional)</label>
                             </div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div>
+                            <!-- <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div> -->
+                            <div class="d-grid">
+                                <button class="g-recaptcha btn btn-primary btn-xl"  type="button"
+                                    data-sitekey="6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty" 
+                                    data-callback='onSubmit' 
+                                    data-action='submit'>Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -365,5 +374,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- Google reCaptcha -->
+        <script>
+            function onSubmit(token) {
+              document.getElementById("contactForm").submit();
+            }
+        </script>
+
     </body>
 </html>
