@@ -21,6 +21,13 @@
         <!-- Google recaptcha -->
         <link rel="preconnect" href="https://www.google.com">
         <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+        <!-- Google reCaptcha -->
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+            function onSubmit(token) {
+              document.getElementById("contactForm").submit();
+            }
+          </script>
     </head>
 
     <body id="page-top">
@@ -347,9 +354,9 @@
                             <!-- Submit Button-->
                             <div class="d-grid">
                                 <button class="g-recaptcha btn btn-primary btn-xl" 
-                                    id="submitButton" 
+                                    id="submit" 
                                     type="submit" 
-                                    title="Submit"
+                                    title="submit"
                                     data-sitekey="6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty" 
                                     data-callback='onSubmit' 
                                     data-action='submit'>Submit
@@ -377,7 +384,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- Google reCaptcha -->
-        <script src="https://www.google.com/recaptcha/api.js"></script>
     </body>
 </html>
