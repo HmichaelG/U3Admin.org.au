@@ -21,25 +21,8 @@
         <!-- Google recaptcha -->
         <link rel="preconnect" href="https://www.google.com">
         <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-        <script>
-            var onSubmit = function(token) {
-                console.log(token);
-                // You can check token here and decide what to do
-            };
-    
-            var onloadCallback = function() {
-                grecaptcha.render('submitButton', {
-                    'sitekey' : '6LfE59knAAAAAGHBhYACdH8g4rlGLOVHNJzd8avL',
-                    'callback' : onSubmit
-                });
-                document.getElementById('submitButton').disabled = true;
-            };
-    
-            /////
-            // code to enable your button when you have content in the inputs
-            /////
-        </script>        
     </head>
+
     <body id="page-top">
 
         <!-- Success modal -->
@@ -362,7 +345,16 @@
                                 <label for="message">Additional Details (optional)</label>
                             </div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><input class="g-recaptcha btn btn-primary btn-xl" id="submitButton" type="submit"></input></div>
+                            <div class="d-grid">
+                                <button class="g-recaptcha btn btn-primary btn-xl" 
+                                    id="submitButton" 
+                                    type="submit" 
+                                    title="Submit"
+                                    data-sitekey="6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty" 
+                                    data-callback='onSubmit' 
+                                    data-action='submit'>Submit
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -386,6 +378,6 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <!-- Google reCaptcha -->
-        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
     </body>
 </html>
