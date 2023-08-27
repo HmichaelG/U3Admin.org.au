@@ -21,7 +21,7 @@
         <!-- Google recaptcha -->
         <link rel="preconnect" href="https://www.google.com">
         <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body id="page-top">
 
@@ -345,13 +345,9 @@
                                 <label for="message">Additional Details (optional)</label>
                             </div>
                             <!-- Submit Button-->
-                            <!-- <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div> -->
-                            <div class="d-grid">
-                                <button class="g-recaptcha btn btn-primary btn-xl"  type="submit"
-                                    data-sitekey="6LfE59knAAAAAGHBhYACdH8g4rlGLOVHNJzd8avL" 
-                                    data-callback='onSubmit' 
-                                    data-action='submit'>Submit</button>
-                            </div>
+                            <div class="g-recaptcha" data-sitekey="6LfE59knAAAAAGHBhYACdH8g4rlGLOVHNJzd8avL"></div>
+                            <br>                            
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div>
                         </form>
                     </div>
                 </div>
@@ -374,13 +370,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-
-        <!-- Google reCaptcha -->
-        <script>
-            function onSubmit(token) {
-              document.getElementById("contactForm").submit();
-            }
-        </script>
 
     </body>
 </html>
