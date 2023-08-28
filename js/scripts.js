@@ -82,9 +82,10 @@ window.addEventListener("load", () => {
 
       // Set up our request
       var url = document.URL;
-      if (url.startsWith("file://")) {
+      if (url.startsWith("http://localhost/#contact")) {
         xhr.open("POST", "http://localhost:7071/api/ContactRequest");
-      }
+        // document.getElementById("message").innerHTML = url;
+    }
       else {
         xhr.open("POST", "https://u3alinuxfunctions.azurewebsites.net/api/ContactRequest");
       }
