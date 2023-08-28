@@ -71,12 +71,12 @@ window.addEventListener("load", () => {
             // Call a function when the state changes.
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
-                    okModal.show();
-                    document.getElementById("contactForm").reset();
                     var btn = document.getElementById("submitButton");
                     btn.innerText = 'Your request has been successfully submitted!'
                     btn.disabled = true;
+                    document.getElementById("contactForm").reset();
                     document.getElementById("page-top").focus();
+                    okModal.show();
                 }
                 else {
                     if (xhr.responseText) {
