@@ -26,10 +26,15 @@
         <script src="https://www.google.com/recaptcha/api.js?render=6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty"></script>
         <script>
             grecaptcha.ready(function() {
+                setCaptchaToken();
+                setInterval(function () { setCaptchaToken(); }, 2 * 60 * 1000);
+            });
+
+            function setCaptchaToken() {
                 grecaptcha.execute("6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty", {action: "homepage"}).then(function(token) {
                    document.getElementById("token").value = token;
                 });
-            });
+            }
         </script>
 
 <!-- MS Clarity tracking -->
@@ -79,6 +84,7 @@
                         <p>Hopefully, this is a temporary issue and can be sorted out quickly.
                                 So, why not try again in a little while.</p>
                         <p>Alternatively, please make contact via one of our current U3A clients.</p>
+                        <strong><span id="errorMsg">.</span></strong>
                     </div>
                 </div>
                 <div class="modal-footer">

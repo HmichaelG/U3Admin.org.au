@@ -75,6 +75,12 @@ window.addEventListener("load", () => {
                 okModal.show();
             }
             else {
+               if (xhr.responseText) {
+                document.getElementById("errorMsg").innerHTML = "reCaptcha Error: " + xhr.responseText;
+               }
+               else {
+                document.getElementById("errorMsg").innerHTML = "Error: rejected by Google reCaptcha";
+               }
                 errModal.show();
             }
         }
@@ -84,7 +90,6 @@ window.addEventListener("load", () => {
       var url = document.URL;
       if (url.startsWith("http://localhost/#contact")) {
         xhr.open("POST", "http://localhost:7071/api/ContactRequest");
-        // document.getElementById("message").innerHTML = url;
     }
       else {
         xhr.open("POST", "https://u3alinuxfunctions.azurewebsites.net/api/ContactRequest");
