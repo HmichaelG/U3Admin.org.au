@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="A modern web application to manage and administer your U3A Group" />
-        <meta name="keywords" content="U3A,University of the Third Age,membership,enrolment,attendance,course,class">
-        <meta name="author" content="Michael Hanlon" />
-        <title>U3A Administration</title>
-        <!-- Bing webmaster tools -->
-        <meta name="msvalidate.01" content="FE17E157DA5D4FAFF8CD665B09B69AE3" />
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
-        <!-- Bootstrap Icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <!-- Google recaptcha -->
-        <link rel="preconnect" href="https://www.google.com">
-        <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-        <script src="https://www.google.com/recaptcha/api.js?render=6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty"></script>
-        <script>
-        </script>
 
-<!-- MS Clarity tracking -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "im2qsix2fp");
-</script>
+<head>
+    <!-- refer https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls#rel-canonical-link-method -->
+    <link rel="canonical" href="https://u3admin.org.au" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A modern web application to manage and administer your U3A Group" />
+    <meta name="keywords" content="U3A,University of the Third Age,membership,enrolment,attendance,course,class">
+    <meta name="author" content="Michael Hanlon" />
+    <title>U3A Administration</title>
+    <!-- Bing webmaster tools -->
+    <meta name="msvalidate.01" content="FE17E157DA5D4FAFF8CD665B09B69AE3" />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Google recaptcha -->
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty"></script>
+    <script>
+    </script>
 
-    </head>
+    <!-- MS Clarity tracking -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "im2qsix2fp");
+    </script>
 
-    <body id="page-top" tabindex="-1">
+</head>
 
-        <!-- Success modal -->
-        <div class="modal" id="modal" name="modal" tabindex="-1">
-            <div class="modal-dialog">
-              <div class="modal-content">
+<body id="page-top" tabindex="-1">
+
+    <!-- Success modal -->
+    <div class="modal" id="modal" name="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Thank you</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title">Thank you</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-muted">
                     <p>Thank you for getting in contact with us.</p>
@@ -54,344 +58,373 @@
                     <p>Alternatively, you can make contact via one of our current U3A clients.</p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                 </div>
-              </div>
             </div>
-          </div>
-          
-          <!-- Error modal -->
-          <div class="modal" id="errModal" name="errModal" tabindex="-1">
-            <div class="modal-dialog">
-              <div class="modal-content">
+        </div>
+    </div>
+
+    <!-- Error modal -->
+    <div class="modal" id="errModal" name="errModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title bi-emoji-frown">&nbsp; Oops! Something went wrong</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title bi-emoji-frown">&nbsp; Oops! Something went wrong</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-muted">
                     <div class="alert alert-danger">
                         <p>We appear to be experiencing problems.</p>
                         <p>Hopefully, this is a temporary issue and can be sorted out quickly.
-                                So, why not try again in a little while.</p>
+                            So, why not try again in a little while.</p>
                         <p>Alternatively, please make contact via one of our current U3A clients.</p>
                         <strong><span id="errorMsg">.</span></strong>
                     </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">
-                    <img src="./favicon/android-chrome-512x512.png" alt="..." height="54">
-                    U3Admin</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#page-top">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Images</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#users">Clients</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
-        </nav>
+        </div>
+    </div>
 
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Administration software for your U3A</h1>
-                        <hr class="divider" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white mb-5">Intuitive, easy to use software designed from the ground up to manage your U3A</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-                    </div>
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">
+                <img src="./favicon/android-chrome-512x512.png" alt="..." height="54">
+                U3Admin</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#page-top">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Images</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#users">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold">Administration software for your U3A</h1>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white mb-5">Intuitive, easy to use software designed from the ground up to manage
+                        your U3A</p>
+                    <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- About-->
-        <section class="page-section bg-primary" id="about" tabindex="-1">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
-                        <hr class="divider divider-light" />
-                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-cup-hot" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5ZM2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175Z"/>
-                            <path d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z"/>
-                          </svg>
-                        <p class="text-white-75 m-4">For the monthly cost of one cup of coffee, <strong>U3Admin</strong> will assist in the management and administration of
-                            your U3A including new membership, membership renewal, online fee payment, course enrolment, class attendance,
-                            reliable member email and much more.</p>
-                            <p class="text-white-75 mb-4">No, not one cup per member.</p>
-                            <p class="text-white-75 mb-4">That's one cup of coffee, total. No strings attached!</p>
-                            <p class="text-white-75 mb-4">Interested? Let's explore further.</p>
-                            <a class="mt-4 btn btn-light btn-xl" href="#product">Get Started!</a>
-                    </div>
+    <!-- About-->
+    <section class="page-section bg-primary" id="about" tabindex="-1">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0">We've got what you need!</h2>
+                    <hr class="divider divider-light" />
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                        fill="currentColor" class="bi bi-cup-hot" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5ZM2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175Z" />
+                        <path
+                            d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z" />
+                    </svg>
+                    <p class="text-white-75 m-4">For the monthly cost of one cup of coffee, <strong>U3Admin</strong>
+                        will assist in the management and administration of
+                        your U3A including new membership, membership renewal, online fee payment, course enrolment,
+                        class attendance,
+                        reliable member email and much more.</p>
+                    <p class="text-white-75 mb-4">No, not one cup per member.</p>
+                    <p class="text-white-75 mb-4">That's one cup of coffee, total. No strings attached!</p>
+                    <p class="text-white-75 mb-4">Interested? Let's explore further.</p>
+                    <a class="mt-4 btn btn-light btn-xl" href="#product">Get Started!</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Product-->
-        <section class="page-section" id="product">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">Our software</h2>
-                <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-phone fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Member portal</h3>
-                            <p class="text-muted mb-0">Members have access to their U3A membership &amp; enrolment details anywhere, anytime, on any device.</p>
-                            <p class="text-muted mb-0">Robust security ensures access is granted to their details and only their details.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Administration website</h3>
-                            <p class="text-muted mb-0">Need to add a new course, change a class time, review statistics or run a report?</p>
-                                <p class="text-muted mb-0">With contextual help a click away, our administration website provides secure, role-based access to all these functions and more.</p>
-                            </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-clock fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">We never sleep</h3>
-                            <p class="text-muted mb-0">Every night our minions get to work to prepare your database for tomorrow's classes.</p>
-                            <p class="text-muted mb-0">Things like emailing a member's cash receipt, confirming an enrolment, providing leaders with
-                                up to date class lists, preparing class attendance records and managing the waitlist are all done overnight.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Made with love</h3>
-                            <p class="text-muted mb-0">U3Admin is open source.</p>
-                            <p class="text-muted mb-0">That's computer-speak meaning <emphasis>not for profit</emphasis>.</p>
-                            <p class="text-muted mb-0">It is free to download and customise at any time.</p>
-                            <p class="text-muted mb-0">We don't sell software. It is free for all.</p>
-                            <p class="mt-4"><a class="nav-link bi-github text-muted" href="https://github.com/HmichaelG/U3A">&nbsp; Our Github repository</a></p>
-                        </div>
+    <!-- Product-->
+    <section class="page-section" id="product">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Our software</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-phone fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Member portal</h3>
+                        <p class="text-muted mb-0">Members have access to their U3A membership &amp; enrolment details
+                            anywhere, anytime, on any device.</p>
+                        <p class="text-muted mb-0">Robust security ensures access is granted to their details and only
+                            their details.</p>
                     </div>
                 </div>
-
-                <!-- Product 2nd row -->
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-envelope fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Reliable email</h3>
-                            <p class="text-muted mb-0">Say goodbye to bounced email.</p>
-                            <p class="text-muted mb-0">Our email service provider provides a world-renowned delivery service second to none.</p>
-                        </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Administration website</h3>
+                        <p class="text-muted mb-0">Need to add a new course, change a class time, review statistics or
+                            run a report?</p>
+                        <p class="text-muted mb-0">With contextual help a click away, our administration website
+                            provides secure, role-based access to all these functions and more.</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-key fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Your data is safe</h3>
-                            <p class="text-muted mb-0">Encrypted in transit and encrypted at rest.</p>
-                            <p class="text-muted mb-0">It's like keeping your data in a locked box. It is safe from prying eyes at all times
-                                yet immediately available to those authorised to use it.</p>
-                            <p class="text-muted mb-0"></p>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-clock fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">We never sleep</h3>
+                        <p class="text-muted mb-0">Every night our minions get to work to prepare your database for
+                            tomorrow's classes.</p>
+                        <p class="text-muted mb-0">Things like emailing a member's cash receipt, confirming an
+                            enrolment, providing leaders with
+                            up to date class lists, preparing class attendance records and managing the waitlist are all
+                            done overnight.</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe bi-globe-asia-australia fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Hosted in Australia</h3>
-                            <p class="text-muted mb-0">Our website and your data is hosted locally in Australia within a Microsoft Azure data center.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-people fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Large or small</h3>
-                            <p class="text-muted mb-0">No matter your U3A is large or small. Our U3Admin software is a great fit for you.</p>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Made with love</h3>
+                        <p class="text-muted mb-0">U3Admin is open source.</p>
+                        <p class="text-muted mb-0">That's computer-speak meaning <emphasis>not for profit</emphasis>.
+                        </p>
+                        <p class="text-muted mb-0">It is free to download and customise at any time.</p>
+                        <p class="text-muted mb-0">We don't sell software. It is free for all.</p>
+                        <p class="mt-4"><a class="nav-link bi-github text-muted"
+                                href="https://github.com/HmichaelG/U3A">&nbsp; Our Github repository</a></p>
                     </div>
                 </div>
             </div>
-        </section>
 
-
-        <!-- Portfolio-->
-        <div id="portfolio">
-
-            <section class="page-section-sm bg-secondary text-white">
-                <div class="container px-4 px-lg-5 text-center">
-                    <h2 class="mb-4">Sample Images</h2>
-                    <p class="text-white-75 mb-0">Click an image to view.</p>
+            <!-- Product 2nd row -->
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-envelope fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Reliable email</h3>
+                        <p class="text-muted mb-0">Say goodbye to bounced email.</p>
+                        <p class="text-muted mb-0">Our email service provider provides a world-renowned delivery service
+                            second to none.</p>
+                    </div>
                 </div>
-            </section>
-
-            <div class="container-fluid p-0 bg-secondary">
-                <div class="row g-0">
-                    <div class="col-lg-2 col-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/iphone.png" title="Member Portal Menu">
-                            <img class="img-fluid" src="assets/img/portfolio/fullsize/iphone.png" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Member Portal</div>
-                                <div class="project-name">Menu</div>
-                            </div>
-                        </a>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-key fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Your data is safe</h3>
+                        <p class="text-muted mb-0">Encrypted in transit and encrypted at rest.</p>
+                        <p class="text-muted mb-0">It's like keeping your data in a locked box. It is safe from prying
+                            eyes at all times
+                            yet immediately available to those authorised to use it.</p>
+                        <p class="text-muted mb-0"></p>
                     </div>
-                    <div class="col-lg-2 col-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/member-details.png" title="Member Details">
-                            <img class="img-fluid" src="assets/img/portfolio/fullsize/member-details.png" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Member Portal</div>
-                                <div class="project-name">Member details entry</div>
-                            </div>
-                        </a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-globe bi-globe-asia-australia fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Hosted in Australia</h3>
+                        <p class="text-muted mb-0">Our website and your data is hosted locally in Australia within a
+                            Microsoft Azure data center.</p>
                     </div>
-                    <div class="col-lg-2 col-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/fees.png" title="Fee Payment">
-                            <img class="img-fluid" src="assets/img/portfolio/fullsize/fees.png" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Member Portal</div>
-                                <div class="project-name">Pay member fees</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/view.png" title="View Enrolments">
-                            <img class="img-fluid" src="assets/img/portfolio/fullsize/view.png" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Member Portal</div>
-                                <div class="project-name">View Enrolments</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/Choose.png" title="Add Enrolment">
-                            <img class="img-fluid" src="assets/img/portfolio/fullsize/Choose.png" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Member Portal</div>
-                                <div class="project-name">Add Enrolment</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/whatson.png" title="What's on today">
-                            <img class="img-fluid" src="assets/img/portfolio/fullsize/whatson.png" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Member Portal</div>
-                                <div class="project-name">What's on today</div>
-                            </div>
-                        </a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-people fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Large or small</h3>
+                        <p class="text-muted mb-0">No matter your U3A is large or small. Our U3Admin software is a great
+                            fit for you.</p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Products footer-->
-        <section class="page-section-sm bg-secondary text-white" ></section>
+    </section>
 
 
-        <!-- Users -->
-        <section class="page-section bg-primary" id="users">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="user-title mt-0">Our valued clients</h2>
-                        <p class="text-white-75 mt-4">A small but growing, happy user base.<br/>Click a U3A to view.</p>
-                        <hr class="divider divider-light" />
-                        <p class="mt-4"><a class="btn btn-lg btn-primary" href="https://eastlakes.u3anet.org.au/" >Eastlakes U3A Inc</a></p>
-                        <p class="mt-4"><a class="btn btn-lg btn-primary" href="https://lakemacquarie.u3anet.org.au/" >Lake Macquarie U3A Inc</a></p>
-                        <p class="mt-4"><a class="btn btn-lg btn-primary" href="https://newcastle.u3anet.org.au/" >Newcastle U3A Inc</a></p>
-                    </div>
-                </div>
+    <!-- Portfolio-->
+    <div id="portfolio">
+
+        <section class="page-section-sm bg-secondary text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">Sample Images</h2>
+                <p class="text-white-75 mb-0">Click an image to view.</p>
             </div>
         </section>
-        <style>
-            .user-title {
-                color: var(--bs-gray-700)
-            }
-        </style>
-        
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">Ready take the next step? Complete the contact form and we will get back to you as soon as possible!</p>
-                    </div>
+
+        <div class="container-fluid p-0 bg-secondary">
+            <div class="row g-0">
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/iphone.png" title="Member Portal Menu">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/iphone.png" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">Menu</div>
+                        </div>
+                    </a>
                 </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                        <form id="contactForm" name="contactForm" >
-                                <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" name="name" Title="Name" type="text" required />
-                                <label for="name">Full name</label>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" name="email" Title="Email" type="email" required />
-                                <label for="email">Email address</label>
-                            </div>
-                            <!-- Phone number-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" name="phone" Title="Phone" type="phone" required />
-                                <label for="email">Phone (optional)</label>
-                            </div>
-                            <!-- U3A Name-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" name="u3a" Title="U3A" type="text" required />
-                                <label for="u3a">Your U3A Name</label>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea id="message" class="form-control textarea-height" name="message" Title="message" type="text" style="height: 10rem" ></textarea>
-                                <label for="message">Additional Details (optional)</label>
-                            </div>
-                            <input type="hidden" id="token" name="token">
-                            <!-- Submit Button-->
-                            <div class="d-grid">
-                                <button id="submitButton" class="btn btn-primary btn-xl" 
-                                    data-sitekey="6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty" 
-                                    data-callback='onSubmit' 
-                                    data-action='submit'>Submit
-                                </button>
-                            </div>                    
-                        </form>
-                    </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/member-details.png"
+                        title="Member Details">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/member-details.png" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">Member details entry</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/fees.png" title="Fee Payment">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/fees.png" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">Pay member fees</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/view.png" title="View Enrolments">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/view.png" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">View Enrolments</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/Choose.png" title="Add Enrolment">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/Choose.png" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">Add Enrolment</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/whatson.png" title="What's on today">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/whatson.png" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">What's on today</div>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy;<span id="year"></span> - U3Admin.org.au</div></div>
-            
+        </div>
+    </div>
+
+    <!-- Products footer-->
+    <section class="page-section-sm bg-secondary text-white"></section>
+
+
+    <!-- Users -->
+    <section class="page-section bg-primary" id="users">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="user-title mt-0">Our valued clients</h2>
+                    <p class="text-white-75 mt-4">A small but growing, happy user base.<br />Click a U3A to view.</p>
+                    <hr class="divider divider-light" />
+                    <p class="mt-4"><a class="btn btn-lg btn-primary" href="https://eastlakes.u3anet.org.au/">Eastlakes
+                            U3A Inc</a></p>
+                    <p class="mt-4"><a class="btn btn-lg btn-primary" href="https://lakemacquarie.u3anet.org.au/">Lake
+                            Macquarie U3A Inc</a></p>
+                    <p class="mt-4"><a class="btn btn-lg btn-primary" href="https://newcastle.u3anet.org.au/">Newcastle
+                            U3A Inc</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .user-title {
+            color: var(--bs-gray-700)
+        }
+    </style>
+
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Let's Get In Touch!</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">Ready take the next step? Complete the contact form and we will get back
+                        to you as soon as possible!</p>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <form id="contactForm" name="contactForm">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="name" Title="Name" type="text" required />
+                            <label for="name">Full name</label>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="email" Title="Email" type="email" required />
+                            <label for="email">Email address</label>
+                        </div>
+                        <!-- Phone number-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="phone" Title="Phone" type="phone" required />
+                            <label for="email">Phone (optional)</label>
+                        </div>
+                        <!-- U3A Name-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="u3a" Title="U3A" type="text" required />
+                            <label for="u3a">Your U3A Name</label>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea id="message" class="form-control textarea-height" name="message" Title="message"
+                                type="text" style="height: 10rem"></textarea>
+                            <label for="message">Additional Details (optional)</label>
+                        </div>
+                        <input type="hidden" id="token" name="token">
+                        <!-- Submit Button-->
+                        <div class="d-grid">
+                            <button id="submitButton" class="btn btn-primary btn-xl"
+                                data-sitekey="6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty" data-callback='onSubmit'
+                                data-action='submit'>Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright &copy;<span id="year"></span> - U3Admin.org.au</div>
+        </div>
+
         <script>
             const d = new Date();
             let year = d.getFullYear();
             document.getElementById("year").innerHTML = year;
         </script>
 
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- Google reCaptcha -->
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- Google reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
+
 </html>
