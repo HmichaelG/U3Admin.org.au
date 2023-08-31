@@ -150,7 +150,3 @@ window.addEventListener("load", () => {
     } // getURL
 
 });
-
-
-
-
