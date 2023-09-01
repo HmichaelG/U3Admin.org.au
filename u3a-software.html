@@ -1,21 +1,171 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
-    <link rel="canonical" href="https://u3admin.org.au" />
+    <!-- refer https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls#rel-canonical-link-method -->
+    <link rel="canonical" href="https://u3admin.org.au/u3a-membership-software.html" />
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A modern web application to manage and administer your U3A Group" />
+    <meta name="keywords"
+        content="U3A software,U3A Administration,U3A member portal,U3A membership,U3A enrolment,U3A attendance,U3A course,U3A class">
+    <meta name="author" content="Michael Hanlon" />
+    <meta name='robots' content='max-image-preview:large' />
 
-    <title>U3A software</title>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:url" content="https://u3admin.org.au/" />
+    <meta property="og:site_name" content="Administration software for your U3A" />
+    <meta property="og:description" content="A modern web application to manage and administer your U3A Group" />
+
+    <title>U3A Membership Software</title>
+    <!-- Bing webmaster tools -->
+    <meta name="msvalidate.01" content="FE17E157DA5D4FAFF8CD665B09B69AE3" />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Google recaptcha -->
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty"></script>
+
+    <!-- MS Clarity tracking -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "im2qsix2fp");
+    </script>
 
 </head>
 
-<body>
+<body id="page-top" tabindex="-1">
+
+
+    <!-- Footer: On IIS this require Server Side Includes to be installed and mapped to *.html files -->
+    <!--#include virtual="/sub-header.html" -->
+
     <script>
-        let url = "https://u3admin.org.au";
-        window.location.href = url;
+        // 
+        e = document.getElementById("menu-link-2");
+        a = document.createElement('a');
+        a.href = "u3a-administration-software.html";
+        a.innerHTML = "U3A Administration Website";
+        a.innerHTML = "<span class='bi-laptop'> &nbsp; U3A Administration Website</span>";
+        a.classList.add("nav-link");
+        e.appendChild(a);
+        // 
+        e = document.getElementById("menu-link-1");
+        a = document.createElement('a');
+        a.href = "u3a-member-portal.html";
+        a.innerHTML = "<span class='bi-phone'> &nbsp; U3A Member Portal</span>";
+        a.classList.add("nav-link");
+        e.appendChild(a);
+        // 
+        document.getElementById("title").innerHTML = 'U3A Membership &amp; Course Enrolment Software';
     </script>
+
+    <!-- question 1-->
+    <section class="page-section-xs bg-white" tabindex="-1">
+        <div class="container px-4 px-lg-5">
+            <div class="justify-content-center">
+                <div class="col-lg-10 mx-auto text-left">
+                    <p>There are two major components to our software product...</p>
+
+                    <a href='u3a-administration-software.html'><input class="btn w-100 text-start bg-light"
+                            title="U3A Administration Website - click for more details"
+                            value="U3A Administration Website" /></a>
+                    <p>
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid"
+                            src="../assets/img/admin-website-intor.png" alt="Admin website example"></div>
+                    </p>
+                    <p>
+                        The <em>Administration Website</em> provides access to authorised users only.
+                        An <em>authorised user</em> is one that has successfully authenticated themselves by logging
+                        into the site
+                        and has between assigned one or more administrative roles by the system administrator.
+                    <p>
+                    <p>The administration website contains all the procedures necessary to administer and mange your
+                        membership register,
+                        course and class definition, student enrolment and class attendance.
+                    </p>
+                    <p>
+                        We have reports, and we have analytics. We present that analysis on beautiful dashboards ready
+                        for presentation to your committee.
+                    </p>
+                    <p>Click on the <em>U3A Administration Website</em> menu option for further detail.</p>
+
+                    <a href='u3a-member-portal.html'><input class="btn btn-link-primary w-100 text-start bg-light"
+                            title="U3A Member Portal - click for more details" value="U3A Member Portal" /></a>
+                    <div class="row col-md-9 mx-auto">
+                        <div class="col-md-6">
+                            <div class="text-center text-primary">All members</div>
+                            <div class="border border-5 rounded mx-auto"><img class="img-fluid"
+                                    src="../assets/img/member-portal-menu.png" alt="Admin website example"></div>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-center text-primary">Course leaders &amp; clerks</div>
+                            <div class="border border-5 rounded mx-auto"><img class="img-fluid"
+                                    src="../assets/img/member-portal-leader-menu.png" alt="Admin website example"></div>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--#include virtual="/devices.html" -->
+
+                    <p>
+                        There's an old saying, <em>many hands mke light work,</em> and that's exactly what the <em>U3A
+                            Member Portal</em>
+                        is intended to do. By allowing members secure &amp; controlled access to their information and
+                        only their information
+                        you spread the work formerly undertaken by overworked volunteers. Each member is enabled to
+                        alter their contact details,
+                        pay their membership fees online, enrol and manage their class enrollments, and advise when
+                        leave is taken. A member may
+                        phone, email or SMS their course leaders &amp; clerks but only if permitted by the leaders &amp;
+                        clerks.
+                    </p>
+                    <p>
+                        And, we have not forgotten our leaders &amp; course clerks. They have access to their student
+                        and class details via the
+                        menu option, <em>Your leadership role.</em>. Options include the ability to contact next of kin in
+                        case of emergency,
+                        managing enrolment &amp; waitlists, recording attendance, class cancellation and scheduling
+                        reports. Class participants
+                        may be sent email, SMS or phoned directly all within the app.
+                    </p>
+                    <p>Click on the <em>U3A Member Portal</em> menu option for further detail.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Footer: On IIS this require Server Side Includes to be installed and mapped to *.html files -->
+    <!--#include virtual="/footer.html" -->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- Google reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 
 </html>

@@ -101,10 +101,12 @@ window.addEventListener("load", () => {
     const form = document.getElementById("contactForm");
 
     // Add 'submit' event handler
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        sendData();
-    });
+    if (form) {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            sendData();
+        });
+    }
 
     // Google reCaptcha setup
     grecaptcha.ready(function () {

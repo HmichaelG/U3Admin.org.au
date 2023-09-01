@@ -7935,6 +7935,10 @@ textarea.form-control-lg {
   font-size: 1rem !important;
 }
 
+.fs-tiny {
+  font-size: 0.5rem !important;
+}
+
 .fst-italic {
   font-style: italic !important;
 }
@@ -10841,6 +10845,12 @@ body {
 
 .page-section-sm {
   padding: 4rem 0;
+}
+.page-section-xs {
+  padding: 2.25rem 0;
+}
+.subheader-section {
+  padding: 1.5rem 0;
 }
 
 .text-white-75 {
