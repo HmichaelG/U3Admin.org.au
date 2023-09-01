@@ -429,10 +429,21 @@
         </div>
     </section>
     
-    <!-- Footer: On IIS this require Server Side Includes to be installed and mapped to *.html files -->
+    <!-- Footer -->
 
-    <!--#include virtual="/footer.html" -->
-
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright &copy;<span id="year"></span> - U3Admin.org.au</div>
+        </div>
+    
+        <script>
+            const d = new Date();
+            let year = d.getFullYear();
+            document.getElementById("year").innerHTML = year;
+        </script>
+    
+    </footer>
+    
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- SimpleLightbox plugin JS-->
