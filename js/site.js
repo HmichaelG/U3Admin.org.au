@@ -51,7 +51,7 @@ window.addEventListener("load", () => {
     // Google reCaptcha setup
     grecaptcha.ready(function () {
         setCaptchaToken();
-        setInterval(function () { setCaptchaToken(); }, 30 * 1000);
+        setInterval(function () { setCaptchaToken(); },2 * 60 * 1000);
     });
 
     function setCaptchaToken() {
