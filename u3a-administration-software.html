@@ -1,21 +1,153 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
-    <link rel="canonical" href="https://u3admin.org.au" />
+    <!-- refer https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls#rel-canonical-link-method -->
+    <link rel="canonical" href="https://u3admin.org.au/u3a-administration-software.html" />
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A modern web application to manage and administer your U3A" />
+    <meta name="keywords"
+        content="U3A software,U3A Administration,U3A member portal,U3A membership,U3A enrolment,U3A attendance,U3A course,U3A class">
+    <meta name="author" content="Michael Hanlon" />
+    <meta name='robots' content='max-image-preview:large' />
 
-    <title>U3A Administration software</title>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:url" content="https://u3admin.org.au/" />
+    <meta property="og:site_name" content="Administration software for your U3A" />
+    <meta property="og:description" content="A modern web application to manage and administer your U3A" />
+
+    <title>U3A Membership Software</title>
+    <!-- Bing webmaster tools -->
+    <meta name="msvalidate.01" content="FE17E157DA5D4FAFF8CD665B09B69AE3" />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Google recaptcha -->
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty"></script>
 
 </head>
 
-<body>
-    <script>
-        let url = "https://u3admin.org.au";
-        window.location.href = url;
+<body id="page-top" tabindex="-1">
+
+
+    <!-- Header for non index pages-->
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="/">
+                <img src="./favicon/android-chrome-512x512.png" alt="U3Adimn.org.au" height="32">
+                U3Admin</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/"><span class="bi-house">&nbsp; Home</span></a></li>
+                    <li class="nav-item"><span id="menu-link-4"></span></li>
+                    <li class="nav-item"><span id="menu-link-3"></span></li>
+                    <li class="nav-item"><span id="menu-link-2"></span></li>
+                    <li class="nav-item"><span id="menu-link-1"></span></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-section-xs bg-primary">
+    </header>
+
+    <section class="subheader-section bg-secondary">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 align-bottom justify-content-start text-center">
+                <div class="col-lg-8 mx-auto align-self-end">
+                    <div class="h4 text-white font-weight-bold"><span id="title"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+        // 
+        e = document.getElementById("menu-link-2");
+        a = document.createElement('a');
+        a.href = "u3a-software.html";
+        a.innerHTML = "Introduction";
+        a.classList.add("nav-link");
+        e.appendChild(a);
+        // 
+        e = document.getElementById("menu-link-1");
+        a = document.createElement('a');
+        a.href = "u3a-member-portal.html";
+        a.innerHTML = "U3A Member Portal";
+        a.classList.add("nav-link");
+        e.appendChild(a);
+        // 
+        document.getElementById("title").innerHTML = 'U3A Administration website';
     </script>
+
+    <!-- question 1-->
+    <section class="page-section-xs bg-white" tabindex="-1">
+        <div class="container px-4 px-lg-5">
+            <div class="justify-content-center">
+                <div class="col-lg-10 mx-auto text-left">
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid"
+                            src="../assets/img/admin-website-intro.png" alt="Admin website example"></div>
+                    </p>
+                    <p>
+                        The <em>Administration Website</em> provides access to authorised users only.
+                        An <em>authorised user</em> is one that has successfully authenticated themselves by logging
+                        into the site
+                        and has been assigned one or more administrative roles by the system administrator.
+                    <p>
+                    <p>The administration website contains all the procedures necessary to administer and mange your
+                        membership register,
+                        course and class definition, student enrolment and class attendance.
+                    </p>
+                    <p>
+                        We have reports, and we have analysis. We present that analysis on beautiful dashboards ready
+                        for presentation to your committee.
+                    </p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright &copy;<span id="year"></span> - U3Admin.org.au</div>
+        </div>
+
+        <script>
+            const d = new Date();
+            let year = d.getFullYear();
+            document.getElementById("year").innerHTML = year;
+        </script>
+
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- Google reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 
 </html>
