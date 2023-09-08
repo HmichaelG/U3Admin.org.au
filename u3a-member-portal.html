@@ -11,7 +11,7 @@
     <meta name='robots' content='max-image-preview:large' />
 
     <title>U3A Member Portal</title>
-    
+
     <!-- Bing webmaster tools -->
     <meta name="msvalidate.01" content="FE17E157DA5D4FAFF8CD665B09B69AE3" />
     <!-- Favicon-->
@@ -232,9 +232,102 @@
                     </p>
 
 
-                    <p>Of course your members will have questions. Let's anticipate a few...</p>
+                    <p>Of course your members will have questions. Let's anticipate a few. Click a question...</p>
 
                     <div id="accordion">
+
+                        <div class="card">
+                            <div class="card-header" id="headingWhatCanItDo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link-secondary w-100 text-start" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseWhatCanItDo" aria-expanded="true" aria-controls="collapseWhatCanItDo">
+                                        What can the member portal do for me?
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseWhatCanItDo" class="collapse" aria-labelledby="headingWhatCanItDo"
+                                data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    <div id="accordion-whatCanItDo">
+
+                                        <div class="card">
+                                            <div class="card-header" id="headingStudents">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link-primary text-primary w-100 text-start" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseStudents" aria-expanded="true" aria-controls="collapseStudents">
+                                                        Students
+                                                    </button>
+                                                </h5>
+                                            </div>                
+                                            <div id="collapseStudents" class="collapse show" aria-labelledby="headingStudents"
+                                                data-bs-parent="#accordion-whatCanItDo">
+                                                <div class="card-body">
+                                                    <p>
+                                                        The Member Portal will allow you to...
+                                                    </p>
+                                                    <ul>
+                                                        <li>Access your details securely and in private.</li>
+                                                        <li>View and change your contact details including name,
+                                                            street address, email address, phone numbers and In Case of
+                                                            Emergency details. 
+                                                        </li>
+                                                        <li>Indicate whether or not you want your phone details to be made 
+                                                            available to course leaders &amp; clerks.                                                          
+                                                        </li>
+                                                        <li>View your U3A financial status and pay your fees online.</li>
+                                                        <li>View your current course enrolment details. Enrol into, or remove
+                                                            yourself from courses.
+                                                        </li>
+                                                        <li>Advise course leaders / clerks if you are on leave and unavailable
+                                                            for class.
+                                                        </li>
+                                                        <li>Sign in &amp; out of a class.</li>
+                                                        <li>View your class details for today &amp; view other classes to be held today.</li>
+                                                        <li>Contact your course leaders / clerks via email, phone or SMS.
+                                                            Note: this is dependent on the capabilities of your device.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <div class="card">
+                                            <div class="card-header" id="headingLeaders">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link-primary text-primary w-100 text-start" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseLeaders" aria-expanded="true" aria-controls="collapseLeaders">
+                                                        Leaders &amp; clerks
+                                                    </button>
+                                                </h5>
+                                            </div>                
+                                            <div id="collapseLeaders" class="collapse" aria-labelledby="headingLeaders"
+                                                data-bs-parent="#accordion-whatCanItDo">
+                                                <div class="card-body">
+                                                    <p>
+                                                        As a leader and/or course clerk you wil be able to...
+                                                    </p>
+                                                    <ul>
+                                                        <li>Access the name and contact details of students in your class.</li>
+                                                        <li>Quickly access the In Case of Emergency details of students in your class</li>
+                                                        <li>Assign course clerks, if permitted.</li>
+                                                        <li>Manage enrolment and waitlists, if permitted.</li>
+                                                        <li>Record attendance history.</li>
+                                                        <li>Review student attendance statistics.</li>
+                                                        <li>Request reports to be emailed to you.</li>
+                                                        <li>Contact students via email, phone or SMS.
+                                                            Note: this is dependent on the capabilities of your device.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h5 class="mb-0">
@@ -245,7 +338,7 @@
                                 </h5>
                             </div>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#accordion">
                                 <div class="card-body">
                                     <p>
@@ -283,8 +376,7 @@
                                         as <em>Linked Members</em>. They share the same login and password.
                                         When logged-in, either member can act on behalf of the other linked member(s).
                                     </p>
-                                    <p>Linked members are also a great way of providing assistance to other members, if
-                                        required.
+                                    <p>Linked members are also a great way of providing assistance to other members.
                                         The only caveat is that any member of the linked group has access to
                                         <strong>all</strong> details pertaining
                                         to the other linked member(s).
@@ -324,6 +416,11 @@
                                                 &amp; assigning the payment to the correct member is not 100% reliable
                                                 when done manually.
                                             </li>
+                                            <li>The entire process occurs within the app. You do not have to
+                                                switch to your banking app to make the payment.
+                                            </li>
+                                            <li>Many U3A's will not accept cash and cheques are <em>sooo</em> last
+                                                century!</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -372,13 +469,19 @@
                                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
                                         data-bs-parent="#accordion">
                                         <div class="card-body">
-                                            <p>We never share your physical address with other members<p>
+                                            <h6 class="text-primary">Your street address</h6>
+                                            <p>We never share your physical street address with other students.
+                                                It is only available to those authorised to access our administration
+                                                website.
+                                            <p>
+                                            <h6 class="text-primary">Students</h6>
                                             <p>
                                                 As a student your email address will be shared with your course
                                                 leader &amp; clerk so that they may contact you. It's your choice
                                                 whether you share your phone details. <em>In case of emergency</em>
                                                 details will be available to leaders &amp; clerks.
                                             </p>
+                                            <h6 class="text-primary">Leaders / Clerks</h6>
                                             <p>
                                                 As a leader or clerk, it is your decision whether or not to share
                                                 your email and phone numbers with your students.
@@ -401,8 +504,9 @@
                                         data-bs-parent="#accordion">
                                         <div class="card-body">
                                             <p>Documents produced by the software can be routed via email or post.
-                                               It is the U3A's decision whether or not to use the postal facility
-                                               and whether or not to charge for it. <p>
+                                                It is the U3A's decision whether or not to use the postal facility
+                                                and whether or not to charge for it.
+                                            <p>
                                         </div>
                                     </div>
                                 </div>
