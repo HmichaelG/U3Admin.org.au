@@ -1,9 +1,9 @@
-{
-    "routes": [
-    {
-    "route": "/",
-    "redirect": "/administration-software-for-your-u3a.html",
-    "statusCode": 301
-    }
-    ]
-}
+// {
+//     "routes": [
+//     {
+//     "route": "/",
+//     "redirect": "/administration-software-for-your-u3a.html",
+//     "statusCode": 301
+//     }
+//     ]
+// }
