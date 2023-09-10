@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://u3admin.org.au/</title>
+  <link>https://u3admin.org.au/</link>
+
+<item>
+     <link>https://u3admin.org.au/u3a-software.html</link>
+     <title>U3A Administration Software</title>
+     <description>Modern software to manage and administer your U3A Group</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://u3admin.org.au/u3a-software-introduction.html</link>
+     <title>U3Admin - An introduction</title>
+     <description>An introduction to U3Admin, software to manage and administer your U3A Group</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://u3admin.org.au/u3a-administration-software.html</link>
+     <title>U3Admin Administration Website</title>
+     <description>Introducing the U3Admin administration website</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://u3admin.org.au/u3a-member-portal.html</link>
+     <title>U3A Member Portal</title>
+     <description>An overview of the U3Admin U3A member portal</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://u3admin.org.au/faq.html</link>
+     <title>Frequently Asked Questions</title>
+     <description>Some questions and answers you may have about U3Admin software.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
