@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="An introduction to U3Admin, software to manage and administer your U3A Group" />
+    <meta name="keywords"
+        content="U3A software,U3A Administration,U3A member portal,U3A membership,U3A enrolment,U3A attendance,U3A course,U3A class">
+    <meta name="author" content="Michael Hanlon" />
+    <meta name='robots' content='max-image-preview:large' />
+
+    <title>U3Admin - An introduction</title>
+
+    <!-- Bing webmaster tools -->
+    <meta name="msvalidate.01" content="FE17E157DA5D4FAFF8CD665B09B69AE3" />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Google recaptcha -->
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty"></script>
+
+</head>
+
+<body id="page-top" tabindex="-1">
+
+
+    <!-- Header for non index pages-->
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="/">
+                <img src="./favicon/android-chrome-512x512.png" alt="Home" height="32">
+                U3Admin</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/"><span class="bi-house">&nbsp; Home</span></a></li>
+                    <li class="nav-item"><span id="menu-link-4"></span></li>
+                    <li class="nav-item"><span id="menu-link-3"></span></li>
+                    <li class="nav-item"><span id="menu-link-2"></span></li>
+                    <li class="nav-item"><span id="menu-link-1"></span></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-section-xs bg-primary">
+    </header>
+
+    <section class="subheader-section bg-secondary">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 align-bottom justify-content-start text-center">
+                <div class="col-lg-8 mx-auto align-self-end">
+                    <h1 class="h4 text-white font-weight-bold"><span id="title"></span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // 
+        e = document.getElementById("menu-link-2");
+        a = document.createElement('a');
+        a.href = "u3a-administration-software.html";
+        a.innerHTML = "U3A Administration Website";
+        a.classList.add("nav-link");
+        e.appendChild(a);
+        // 
+        e = document.getElementById("menu-link-1");
+        a = document.createElement('a');
+        a.href = "u3a-member-portal.html";
+        a.innerHTML = "U3A Member Portal";
+        a.classList.add("nav-link");
+        e.appendChild(a);
+        // 
+        document.getElementById("title").innerHTML = 'An introduction to our software';
+    </script>
+
+    <!-- question 1-->
+    <section class="page-section-xs bg-white" tabindex="-1">
+        <div class="container col-lg-8 mx-auto px-4 px-lg-5">
+            <div class="justify-content-center">
+                <div class="text-left">
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="../assets/img/lady-lq.jpg"
+                            alt="Our U3A hero"></div>
+                </div>
+                <p class="pt-4">
+                    Finding the right software for your U3A is no easy task.
+                    It must be feature-rich, yet not too complex,
+                    sufficient for your needs yet able to grow into the future,
+                    affordable but not cheap,
+                    and supportive when you need help. Importantly, it must be designed for
+                    a U3A, not something cobbled together from another industry.
+                </p>
+                <p>
+                    We think that by finding our website your search may be over! Here's what we have to offer...
+                </p>
+                <ul>
+                    <li><a href="#member-register-sufficient-for-your-needs">A Member register sufficient for your
+                            needs</a></li>
+                    <li><a href="#email-service-that-delivers">An Email service that delivers</a></li>
+                    <li><a href="#online-member-payments">Online member payments</a></li>
+                    <li><a href="#complete-course-and-class-scheduling">Complete course &amp; class scheduling</a></li>
+                    <li><a href="#attendance-recording">Attendance recording</a></li>
+                    <li><a href="#single-cource-of-truth">A single source of truth</a></li>
+                    <li><a href="#secure-by-default">Secure By Default</a></li>
+                </ul>
+
+
+                <div id="member-register-sufficient-for-your-needs"
+                    class="alert alert-secondary d-flex align-items-center"> <span class="col-12 bi-people">&nbsp; A
+                        Member register sufficient for your needs</span>
+                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
+                </div>
+                <figure>
+                    <figcaption class="h6 col-10 pt-4">A member's detail</figcaption>
+                    <div class="col-10 border border-5 rounded"><img class="img-fluid" src="../assets/img/person.png"
+                            alt="Person details">
+                    </div>
+                </figure>
+                <p>
+                    We gather member details that are required by your U3A, nothing more and nothing less.
+                </p>
+                <uL>
+                    <li>Member name</li>
+                    <li>Member address, email and phone numbers</li>
+                    <li>Optional birth date &amp; previous occupation / skill</li>
+                    <li>In case of emergency details</li>
+                </uL>
+                <p>We retain payment, enrolment and attendance details for current members.</p>
+                <p>We keep a record of volunteer activities including leader and
+                    course clerk lists, life members and other complimentary membership.</p>
+                <p>Importantly, this is what <strong>we do not</strong> record...</p>
+                <uL>
+                    <li>Bank account details</li>
+                    <li>Credit card numbers</li>
+                    <li>Passwords</li>
+                </uL>
+                <p>Finally, when this information is no longer required then we delete it.</p>
+
+                <div id="email-service-that-delivers" class="alert alert-secondary d-flex align-items-center"> <span
+                        class="col-12 bi-envelope">&nbsp; An email service that delivers!</span>
+                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
+                </div>
+                <p>
+                    There's no doubt about it, email is the inexpensive way of communicating with your membership.
+                    However, if not done correctly you will suffer bounced email and member frustration.
+                </p>
+                <p>
+                    We ensure email addresses are correct by requiring new members to confirm
+                    their email when they register into our system.
+                </p>
+                <p>We do email right meaning 99.9% of your email correspondence will be received by your members.
+                    Below is a graph of a typical 30 day period for one of our U3A's...
+                </p>
+                <div class="border border-5 rounded mx-auto"><img class="img-fluid"
+                        src="../assets/img/reliable-email.png" alt="Reliable email">
+                </div>
+                <p>That's impressive!</p>
+
+                <div id="online-member-payments" class="alert alert-secondary d-flex align-items-center"> <span
+                        class="col-12 bi-bank">&nbsp; Online member payments</span>
+                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
+                </div>
+                <p>We use the <a href="https://eway.com.au/">Eway online payments system</a> to process new member
+                    payments and member renewals.</p>
+                <p>Eway offers a secure and reliable online payment gateway that accepts all major
+                    forms of credit card. Importantly, Eway is an Australian company governed by Australian law
+                    and boasts local Australian support.</p>
+                <p>We can also process payments made by members directly from their bank account. However, the online
+                    payments system is preferred as the transaction is completed in real time, it is far more accurate
+                    and the money is transferred to your U3A's account usually by the next day.
+                </p>
+                <p>
+                    That means no more manual reconciliations and no more orphaned payments.
+                </p>
+
+                <div id="complete-course-and-class-scheduling" class="alert alert-secondary d-flex align-items-center">
+                    <span class="col-12 bi-mortarboard">&nbsp; Complete course &amp; class scheduling</span>
+                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
+                </div>
+                <p>
+                    Preparing the course schedule for the new year or even the next term can be a time consuming
+                    process.
+                    We reduce the data entry workload by incorporating a powerful scheduling module into the software.
+                    It takes
+                    the same amount of effort to create a class held once only as it does for a class held every day,
+                    every week
+                    or every month.
+                </p>
+                <p>
+                    We provide visual aids to assist in the correct definition of course terms and to identify class and
+                    venue conflicts.
+                </p>
+
+                <figure>
+                    <figcaption class="h6">Term definition</figcaption>
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="../assets/img/terms.png"
+                            alt="Term definition">
+                    </div>
+                </figure>
+
+                <figure>
+                    <figcaption class="h6">Class schedule</figcaption>
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="../assets/img/schedule.png"
+                            alt="Class schedule">
+                    </div>
+                </figure>
+
+                <p>And, when you're done we produce a great easy to read class schedule with enrolment / waitlist
+                    statistics that are always up to date.</p>
+
+                <figure>
+                    <figcaption class="h6">Class schedule report</figcaption>
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid"
+                            src="../assets/img/class-schedule-report.png" alt="Class schedule report">
+                    </div>
+                </figure>
+
+                <div id="attendance-recording" class="alert alert-secondary d-flex align-items-center"> <span
+                        class="col-12 bi-person-check">&nbsp; Attendance Recording</span>
+                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
+                </div>
+                <p>
+                    Yes, we know there's a bit of controversy in U3A-land as to whether or not attendance
+                    should be recorded. That's why its completely optional.
+                </p>
+                <p>
+                    If you do decide to record attendance we have some tools to make it easier via the
+                    <a href="u3a-member-portal.html">Member Portal</a>.
+                    Leaders and clerks can record attendance for students in their courses, and students
+                    themselves can record their own attendance via the <em>Cllass Sign-In / Sign-Out</em>
+                    procedure. That saves a lot of work for office volunteers.
+                </p>
+                <p>
+                    Attendance recording itself is a pretty quick and simple process. Just select the students
+                    required from a grid and select Present, Absent With Leave or Absent Without Leave.
+                </p>
+                <p>
+                    And, we give your some great reporting and analysis as a result...
+                </p>
+                <figure>
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid"
+                            src="../assets/img/attendance-report.png" alt="Attendance report">
+                    </div>
+                </figure>
+
+                <div id="single-cource-of-truth" class="alert alert-secondary d-flex align-items-center"> <span
+                        class="col-12 bi-database">&nbsp; A single source of truth</span>
+                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
+                </div>
+                <p>
+                    There is one and only one database of information.
+                    Eliminate multiple spreadsheets, duplication and redundant data
+                    - after all its just a security risk.
+                </p>
+
+                <div id="secure-by-default" class="alert alert-secondary alert-secondary d-flex align-items-center"> <span
+                        class="col-12 bi-key">&nbsp; Secure by default</span>
+                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
+                </div>
+                <p>
+                    How many times have you read the word, <em>secure</em> on this website?
+                    We take this responsibility seriously.
+                    We keep your data safe in Australian-based, Microsoft Azure databases
+                    and provide access to that data using industry-standard role-based authoristaion policies.
+                </p>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright &copy;<span id="year"></span> - U3Admin.org.au</div>
+        </div>
+
+        <script>
+            const d = new Date();
+            let year = d.getFullYear();
+            document.getElementById("year").innerHTML = year;
+        </script>
+
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- Google reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+
+</html>

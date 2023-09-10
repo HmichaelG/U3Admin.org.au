@@ -4,20 +4,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="An introduction to U3Admin, software to manage and administer your U3A Group" />
+    <meta name="description" content="Modern software to manage and administer your U3A Group" />
     <meta name="keywords"
         content="U3A software,U3A Administration,U3A member portal,U3A membership,U3A enrolment,U3A attendance,U3A course,U3A class">
     <meta name="author" content="Michael Hanlon" />
     <meta name='robots' content='max-image-preview:large' />
 
-    <title>U3Admin - An introduction</title>
-
+    <title>U3A Administration Software</title>
+    <script type="application/ld+json">
+        {
+          "@context" : "https://schema.org",
+          "@type" : "WebSite",
+          "name" : "U3Admin.org.au",
+          "alternateName" : "U3Admin",
+          "url" : "https://u3admin.org.au/"
+        }
+    </script>
+    
     <!-- Bing webmaster tools -->
     <meta name="msvalidate.01" content="FE17E157DA5D4FAFF8CD665B09B69AE3" />
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
     <!-- Bootstrap Icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
@@ -26,6 +35,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    
     <!-- Google recaptcha -->
     <link rel="preconnect" href="https://www.google.com">
     <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
@@ -35,12 +45,58 @@
 
 <body id="page-top" tabindex="-1">
 
+    <!-- Success modal -->
+    <div class="modal" id="modal" name="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thank you</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-muted">
+                    <p>Thank you for getting in contact with us.</p>
+                    <p>You will receive an automated system email very shortly to confirm your request.
+                        Don't forget to check your email junk folder.
+                    </p>
+                    <p>You will then hear from us in the near future but please be patient as we are volunteers.</p>
+                    <p>Alternatively, you can make contact via one of our current U3A clients.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Header for non index pages-->
+    <!-- Error modal -->
+    <div class="modal" id="errModal" name="errModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title bi-emoji-frown">&nbsp; Oops! Something went wrong</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-muted">
+                    <div class="alert alert-danger">
+                        <p>We appear to be experiencing problems.</p>
+                        <p>Hopefully, this is a temporary issue and can be sorted out quickly.
+                            So, why not try again in a little while.</p>
+                        <p>Alternatively, please make contact via one of our current U3A clients.</p>
+                        <strong><span id="errorMsg">.</span></strong>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="#page-top">
                 <img src="./favicon/android-chrome-512x512.png" alt="Home" height="32">
                 U3Admin</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
@@ -48,12 +104,25 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/"><span class="bi-house">&nbsp; Home</span></a></li>
-                    <li class="nav-item"><span id="menu-link-4"></span></li>
-                    <li class="nav-item"><span id="menu-link-3"></span></li>
-                    <li class="nav-item"><span id="menu-link-2"></span></li>
-                    <li class="nav-item"><span id="menu-link-1"></span></li>
-                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#page-top">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#difference">Our Difference</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Images</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#users">Clients</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Software
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="u3a-software.html">Introduction</a></li>
+                          <li><a class="dropdown-item" href="u3a-administration-software.html">U3A Administration Website</a></li>
+                          <li><a class="dropdown-item" href="u3a-member-portal.html">U3A Member Portal</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>                                      
                 </ul>
             </div>
         </div>
@@ -62,229 +131,306 @@
     <header class="page-section-xs bg-primary">
     </header>
 
-    <section class="subheader-section bg-secondary">
+    <!-- Masthead-->
+    <header class="masthead" id="masthead">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold">Administration software for your U3A</h1>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white mb-5">Intuitive, easy to use software designed from the ground up to manage
+                        your U3A</p>
+                    <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About-->
+    <section class="page-section bg-primary" id="about" tabindex="-1">
         <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 align-bottom justify-content-start text-center">
-                <div class="col-lg-8 mx-auto align-self-end">
-                    <h1 class="h4 text-white font-weight-bold"><span id="title"></span></h1>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="text-white mt-0">Your search is over</h1>
+                    <h6 class="text-white mt-0">We've got what you need!</h6>
+                    <hr class="divider divider-light" />
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                        fill="currentColor" class="bi bi-cup-hot" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5ZM2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175Z" />
+                        <path
+                            d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z" />
+                    </svg>
+                    <p class="text-white-75 m-4">For the monthly cost of a cup of coffee, our <strong>U3Admin</strong>
+                        software will manage your University of the Third Age (U3A) including the administration of 
+                        new membership, membership renewal, online fee payment, course enrolment, class attendance,
+                        reliable member email and much more.</p>
+                    <p class="text-white-75 mb-4">No, not one cup per member.<br/>
+                        That's one cup of coffee, total. No strings attached!</p>
+                    <p class="text-white-75 mb-4">Interested? Let's explore further.</p>
+                    <a class="mt-4 btn btn-light btn-xl" href="#difference">Get Started!</a>
                 </div>
             </div>
         </div>
     </section>
-    <script>
-        // 
-        e = document.getElementById("menu-link-2");
-        a = document.createElement('a');
-        a.href = "u3a-administration-software.html";
-        a.innerHTML = "U3A Administration Website";
-        a.classList.add("nav-link");
-        e.appendChild(a);
-        // 
-        e = document.getElementById("menu-link-1");
-        a = document.createElement('a');
-        a.href = "u3a-member-portal.html";
-        a.innerHTML = "U3A Member Portal";
-        a.classList.add("nav-link");
-        e.appendChild(a);
-        // 
-        document.getElementById("title").innerHTML = 'An introduction to our software';
-    </script>
 
-    <!-- question 1-->
-    <section class="page-section-xs bg-white" tabindex="-1">
-        <div class="container col-lg-8 mx-auto px-4 px-lg-5">
-            <div class="justify-content-center">
-                <div class="text-left">
-                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="../assets/img/lady-lq.jpg"
-                            alt="Our U3A hero"></div>
-                </div>
-                <p class="pt-4">
-                    Finding the right software for your U3A is no easy task.
-                    It must be feature-rich, yet not too complex,
-                    sufficient for your needs yet able to grow into the future,
-                    affordable but not cheap,
-                    and supportive when you need help. Importantly, it must be designed for
-                    a U3A, not something cobbled together from another industry.
-                </p>
-                <p>
-                    We think that by finding our website your search may be over! Here's what we have to offer...
-                </p>
-                <ul>
-                    <li><a href="#member-register-sufficient-for-your-needs">A Member register sufficient for your
-                            needs</a></li>
-                    <li><a href="#email-service-that-delivers">An Email service that delivers</a></li>
-                    <li><a href="#online-member-payments">Online member payments</a></li>
-                    <li><a href="#complete-course-and-class-scheduling">Complete course &amp; class scheduling</a></li>
-                    <li><a href="#attendance-recording">Attendance recording</a></li>
-                    <li><a href="#single-cource-of-truth">A single source of truth</a></li>
-                    <li><a href="#secure-by-default">Secure By Default</a></li>
-                </ul>
-
-
-                <div id="member-register-sufficient-for-your-needs"
-                    class="alert alert-secondary d-flex align-items-center"> <span class="col-12 bi-people">&nbsp; A
-                        Member register sufficient for your needs</span>
-                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
-                </div>
-                <figure>
-                    <figcaption class="h6 col-10 pt-4">A member's detail</figcaption>
-                    <div class="col-10 border border-5 rounded"><img class="img-fluid" src="../assets/img/person.png"
-                            alt="Person details">
+    <!-- Difference -->
+    <section class="page-section" id="difference">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Our difference</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-phone fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Member portal</h3>
+                        <p class="text-muted mb-0">Members have access to their U3A membership &amp; enrolment details
+                            anywhere, anytime, on any device.</p>
+                        <p class="text-muted mb-0">Robust security ensures access is granted to their details and only
+                            their details.</p>
                     </div>
-                </figure>
-                <p>
-                    We gather member details that are required by your U3A, nothing more and nothing less.
-                </p>
-                <uL>
-                    <li>Member name</li>
-                    <li>Member address, email and phone numbers</li>
-                    <li>Optional birth date &amp; previous occupation / skill</li>
-                    <li>In case of emergency details</li>
-                </uL>
-                <p>We retain payment, enrolment and attendance details for current members.</p>
-                <p>We keep a record of volunteer activities including leader and
-                    course clerk lists, life members and other complimentary membership.</p>
-                <p>Importantly, this is what <strong>we do not</strong> record...</p>
-                <uL>
-                    <li>Bank account details</li>
-                    <li>Credit card numbers</li>
-                    <li>Passwords</li>
-                </uL>
-                <p>Finally, when this information is no longer required then we delete it.</p>
-
-                <div id="email-service-that-delivers" class="alert alert-secondary d-flex align-items-center"> <span
-                        class="col-12 bi-envelope">&nbsp; An email service that delivers!</span>
-                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
                 </div>
-                <p>
-                    There's no doubt about it, email is the inexpensive way of communicating with your membership.
-                    However, if not done correctly you will suffer bounced email and member frustration.
-                </p>
-                <p>
-                    We ensure email addresses are correct by requiring new members to confirm
-                    their email when they register into our system.
-                </p>
-                <p>We do email right meaning 99.9% of your email correspondence will be received by your members.
-                    Below is a graph of a typical 30 day period for one of our U3A's...
-                </p>
-                <div class="border border-5 rounded mx-auto"><img class="img-fluid"
-                        src="../assets/img/reliable-email.png" alt="Reliable email">
-                </div>
-                <p>That's impressive!</p>
-
-                <div id="online-member-payments" class="alert alert-secondary d-flex align-items-center"> <span
-                        class="col-12 bi-bank">&nbsp; Online member payments</span>
-                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
-                </div>
-                <p>We use the <a href="https://eway.com.au/">Eway online payments system</a> to process new member
-                    payments and member renewals.</p>
-                <p>Eway offers a secure and reliable online payment gateway that accepts all major
-                    forms of credit card. Importantly, Eway is an Australian company governed by Australian law
-                    and boasts local Australian support.</p>
-                <p>We can also process payments made by members directly from their bank account. However, the online
-                    payments system is preferred as the transaction is completed in real time, it is far more accurate
-                    and the money is transferred to your U3A's account usually by the next day.
-                </p>
-                <p>
-                    That means no more manual reconciliations and no more orphaned payments.
-                </p>
-
-                <div id="complete-course-and-class-scheduling" class="alert alert-secondary d-flex align-items-center">
-                    <span class="col-12 bi-mortarboard">&nbsp; Complete course &amp; class scheduling</span>
-                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
-                </div>
-                <p>
-                    Preparing the course schedule for the new year or even the next term can be a time consuming
-                    process.
-                    We reduce the data entry workload by incorporating a powerful scheduling module into the software.
-                    It takes
-                    the same amount of effort to create a class held once only as it does for a class held every day,
-                    every week
-                    or every month.
-                </p>
-                <p>
-                    We provide visual aids to assist in the correct definition of course terms and to identify class and
-                    venue conflicts.
-                </p>
-
-                <figure>
-                    <figcaption class="h6">Term definition</figcaption>
-                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="../assets/img/terms.png"
-                            alt="Term definition">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Administration website</h3>
+                        <p class="text-muted mb-0">Need to add a new course, change a class time, review statistics or
+                            run a report?</p>
+                        <p class="text-muted mb-0">With contextual help a click away, our administration website
+                            provides secure, role-based access to all these functions and more.</p>
                     </div>
-                </figure>
-
-                <figure>
-                    <figcaption class="h6">Class schedule</figcaption>
-                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="../assets/img/schedule.png"
-                            alt="Class schedule">
-                    </div>
-                </figure>
-
-                <p>And, when you're done we produce a great easy to read class schedule with enrolment / waitlist
-                    statistics that are always up to date.</p>
-
-                <figure>
-                    <figcaption class="h6">Class schedule report</figcaption>
-                    <div class="border border-5 rounded mx-auto"><img class="img-fluid"
-                            src="../assets/img/class-schedule-report.png" alt="Class schedule report">
-                    </div>
-                </figure>
-
-                <div id="attendance-recording" class="alert alert-secondary d-flex align-items-center"> <span
-                        class="col-12 bi-person-check">&nbsp; Attendance Recording</span>
-                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
                 </div>
-                <p>
-                    Yes, we know there's a bit of controversy in U3A-land as to whether or not attendance
-                    should be recorded. That's why its completely optional.
-                </p>
-                <p>
-                    If you do decide to record attendance we have some tools to make it easier via the
-                    <a href="u3a-member-portal.html">Member Portal</a>.
-                    Leaders and clerks can record attendance for students in their courses, and students
-                    themselves can record their own attendance via the <em>Cllass Sign-In / Sign-Out</em>
-                    procedure. That saves a lot of work for office volunteers.
-                </p>
-                <p>
-                    Attendance recording itself is a pretty quick and simple process. Just select the students
-                    required from a grid and select Present, Absent With Leave or Absent Without Leave.
-                </p>
-                <p>
-                    And, we give your some great reporting and analysis as a result...
-                </p>
-                <figure>
-                    <div class="border border-5 rounded mx-auto"><img class="img-fluid"
-                            src="../assets/img/attendance-report.png" alt="Attendance report">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-clock fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">We never sleep</h3>
+                        <p class="text-muted mb-0">Every night our minions get to work to prepare your database for
+                            tomorrow's classes.</p>
+                        <p class="text-muted mb-0">Things like emailing a member's cash receipt, confirming an
+                            enrolment, providing leaders with
+                            up to date class lists, preparing class attendance records and managing the waitlist are all
+                            done overnight.</p>
                     </div>
-                </figure>
-
-                <div id="single-cource-of-truth" class="alert alert-secondary d-flex align-items-center"> <span
-                        class="col-12 bi-database">&nbsp; A single source of truth</span>
-                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
                 </div>
-                <p>
-                    There is one and only one database of information.
-                    Eliminate multiple spreadsheets, duplication and redundant data
-                    - after all its just a security risk.
-                </p>
-
-                <div id="secure-by-default" class="alert alert-secondary alert-secondary d-flex align-items-center"> <span
-                        class="col-12 bi-key">&nbsp; Secure by default</span>
-                    <a class="justify-content-end" href="#page-top"><span class="bi bi-arrow-up-circle"></span></a>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Made with love</h3>
+                        <p class="text-muted mb-0">U3Admin is open source.</p>
+                        <p class="text-muted mb-0">That's computer-speak meaning <emphasis>not for profit</emphasis>.
+                        </p>
+                        <p class="text-muted mb-0">It is free to download and customise at any time.</p>
+                        <p class="text-muted mb-0">We don't sell software. It is free for all.</p>
+                        <p class="mt-4"><a class="nav-link bi-github text-muted"
+                                href="https://github.com/HmichaelG/U3A">&nbsp; Click to view our Github repository</a></p>
+                    </div>
                 </div>
-                <p>
-                    How many times have you read the word, <em>secure</em> on this website?
-                    We take this responsibility seriously.
-                    We keep your data safe in Australian-based, Microsoft Azure databases
-                    and provide access to that data using industry-standard role-based authoristaion policies.
-                </p>
+            </div>
 
-
+            <!-- Product 2nd row -->
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-envelope fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Reliable email</h3>
+                        <p class="text-muted mb-0">Say goodbye to bounced email.</p>
+                        <p class="text-muted mb-0">Our email service provider delivers a world-class service
+                            second to none.</p>
+                            <p class="text-muted mb-0">Typically, 99.9% of email will be correctly delivered.</p>
+                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-key fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Your data is safe</h3>
+                        <p class="text-muted mb-0">Encrypted in transit and encrypted at rest.</p>
+                        <p class="text-muted mb-0">It's like keeping your data in a locked box. It is safe from prying
+                            eyes at all times
+                            yet immediately available to those authorised to use it.</p>
+                        <p class="text-muted mb-0"></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-globe bi-globe-asia-australia fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Hosted in Australia</h3>
+                        <p class="text-muted mb-0">Our website and your data is hosted locally in Australia within a
+                            Microsoft Azure data center.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-people fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Large or small</h3>
+                        <p class="text-muted mb-0">No matter your U3A is large or small. Our U3Admin software is a great
+                            fit for you.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+
+    <!-- Portfolio-->
+    <div id="portfolio">
+
+        <section class="page-section-sm bg-secondary text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">Sample Images</h2>
+                <p class="text-white-75 mb-0">Click an image to view.<br />
+                    <span class="d-none d-md-inline"><strong>Hint:</strong> Image too small? Feel free to right-click an
+                        image and open in another tab.</span>
+                </p>
+            </div>
+        </section>
+
+        <div class="container-fluid p-0 bg-secondary">
+            <div class="row g-0">
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/iphone.png" title="Member Portal Menu">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/iphone.png" alt="Member Portal Menu" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">Menu</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/member-details.png"
+                        title="Member Details">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/member-details.png" alt="Member Details" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">Member details entry</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/fees.png" title="Fee Payment">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/fees.png" alt="Fee payment" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">Pay member fees</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/view.png" title="View Enrolments">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/view.png" alt="View enrolments" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">View Enrolments</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/Choose.png" title="Add Enrolment">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/Choose.png" alt="Add enrolment" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">Add Enrolment</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/whatson.png" title="What's on today">
+                        <img class="img-fluid" src="assets/img/portfolio/fullsize/whatson.png" alt="What's on today" />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Member Portal</div>
+                            <div class="project-name">What's on today</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products footer-->
+    <section class="page-section-sm bg-secondary text-white"></section>
+
+
+    <!-- Users -->
+    <section class="page-section bg-primary" id="users">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0">Our valued clients</h2>
+                    <p class="text-white-75 mt-4">A small but growing, happy user base.<br />Click a U3A to view.</p>
+                    <hr class="divider divider-light" />
+                    <p class="mt-4"><a class="btn btn-lg btn-primary" href="https://eastlakes.u3anet.org.au/">Eastlakes
+                            U3A Inc</a></p>
+                    <p class="mt-4"><a class="btn btn-lg btn-primary" href="https://lakemacquarie.u3anet.org.au/">Lake
+                            Macquarie U3A Inc</a></p>
+                    <p class="mt-4"><a class="btn btn-lg btn-primary" href="https://newcastle.u3anet.org.au/">Newcastle
+                            U3A Inc</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .user-title {
+            color: var(--bs-gray-700)
+        }
+    </style>
+
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Let's Get In Touch!</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">Ready to take the next step? Complete the contact form and we will get
+                        back
+                        to you as soon as possible!</p>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <form id="contactForm" name="contactForm">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="name" Title="Name" type="text" required />
+                            <label for="name">Full name</label>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="email" Title="Email" type="email" required />
+                            <label for="email">Email address</label>
+                        </div>
+                        <!-- Phone number-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="phone" Title="Phone" type="phone" />
+                            <label for="email">Phone (optional)</label>
+                        </div>
+                        <!-- U3A Name-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="u3a" Title="U3A" type="text" required />
+                            <label for="u3a">Your U3A Name</label>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea id="message" class="form-control textarea-height" name="message" Title="message"
+                                type="text" style="height: 10rem"></textarea>
+                            <label for="message">Additional Details (optional)</label>
+                        </div>
+                        <input type="hidden" id="token" name="token">
+                        <!-- Submit Button-->
+                        <div class="d-grid">
+                            <button id="submitButton" class="btn btn-primary btn-xl"
+                                data-sitekey="6LfkytknAAAAAAYsNdr5hNmCJYHZuU37gQSzLDty" data-callback='onSubmit'
+                                data-action='submit'>Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
 
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
@@ -305,6 +451,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <!-- u3admin specific -->
+    <script src="js/site.js"></script>
     <!-- Google reCaptcha -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
