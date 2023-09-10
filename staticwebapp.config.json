@@ -1,7 +1,7 @@
 {
     "routes": [
     {
-    "route": "/index.html",
+    "route": "/",
     "redirect": "/administration-software-for-your-u3a.html",
     "statusCode": 301
     }
