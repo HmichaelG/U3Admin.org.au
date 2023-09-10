@@ -2,8 +2,7 @@
     "routes": [
     {
     "route": "/index.html",
-    "redirect": "/u3a-software.html",
-    "statusCode": 301
+    "rewrite": "/u3a-software.html"
     }
     ]
 }
