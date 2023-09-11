@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
 <channel>
-  <title>ROR Sitemap for https://u3admin.org.au/</title>
-  <link>https://u3admin.org.au/</link>
+  <title>ROR Sitemap for http://u3admin.org.au/</title>
+  <link>http://u3admin.org.au/</link>
 
 <item>
      <link>https://u3admin.org.au/</link>
      <title>U3A Administration Software</title>
-     <description>Modern software to manage and administer your U3A Group</description>
+     <description>U3A Membership and Course Administration software</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>0</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
