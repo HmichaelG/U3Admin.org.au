@@ -2,7 +2,7 @@
     "routes": [
     {
     "route": "/index.html",
-    "rewrite": "/u3a-software.html"
+    "rewrite": "/"
     }
     ]
 }
