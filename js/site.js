@@ -58,18 +58,32 @@ window.addEventListener("load", () => {
 window.addEventListener("load", () => {
 
     (async () => {
-        const target = document.getElementById('clientList');
+        const clientListTarget = document.getElementById('clientList');
+        const portalListTarget = document.getElementById('portalList');
         const res = await fetch(getURL("GetTenants"), {
-          headers: { Accept: 'application/json' },
+            headers: { Accept: 'application/json' },
         });
         const json = await res.json();
-        var result = ''
-        json.forEach((tenant) => {
-            result += `<p class="mt-4"><a class="btn btn-lg btn-primary" href=${tenant.website}>${tenant.name}</a></p>`;
-            target.innerHTML = result;
-          });
-      })();
-      
+
+        if (clientListTarget) {
+            var result = ''
+            json.forEach((tenant) => {
+                result += `<p class="mt-4"><a class="btn btn-lg btn-primary" href=${tenant.website}>${tenant.name}</a></p>`;
+                clientListTarget.innerHTML = result;
+            })
+        };
+
+        if (portalListTarget) {
+            var result = ''
+            json.forEach((tenant) => {
+                website = `https://${tenant.tenantID}.u3admin.org.au/`;
+                result += `<p class="mt-4 d-grid d-block gap-2"><a class="btn btn-lg btn-outline-primary" href=${website}>${tenant.name}</a></p>`;
+                portalListTarget.innerHTML = result;
+            })
+        };
+
+    })();
+
 
 });
 
