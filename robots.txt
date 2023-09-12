@@ -1,5 +1,5 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: http://u3admin.org.au/sitemap/sitemap.xml
+Sitemap: http://u3admin.org.au/sitemap.xml
 
