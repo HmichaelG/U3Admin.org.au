@@ -1,3 +1,6 @@
+
+// ********** Submit contact form **********
+
 window.addEventListener("load", () => {
     function sendData() {
         const xhr = new XMLHttpRequest();
@@ -48,10 +51,37 @@ window.addEventListener("load", () => {
         });
     }
 
+});
+
+// ********** Get tenant detail **********
+
+window.addEventListener("load", () => {
+
+    (async () => {
+        const target = document.getElementById('clientList');
+        const res = await fetch(getURL("GetTenants"), {
+          headers: { Accept: 'application/json' },
+        });
+        const json = await res.json();
+        var result = ''
+        json.forEach((tenant) => {
+            result += `<p class="mt-4"><a class="btn btn-lg btn-primary" href=${tenant.website}>${tenant.name}</a></p>`;
+            target.innerHTML = result;
+          });
+      })();
+      
+
+});
+
+
+// ********** Get reCaptcha key **********
+
+window.addEventListener("load", () => {
+
     // Google reCaptcha setup
     grecaptcha.ready(function () {
         setCaptchaToken();
-        setInterval(function () { setCaptchaToken(); },2 * 60 * 1000);
+        setInterval(function () { setCaptchaToken(); }, 2 * 60 * 1000);
     });
 
     function setCaptchaToken() {
@@ -81,14 +111,17 @@ window.addEventListener("load", () => {
 
     }; // getClientKey
 
-    function getURL(functionName) {
-        var url = document.URL;
-        if (url.startsWith("http://localhost")) {
-            return "http://localhost:7071/api/" + functionName;
-        }
-        else {
-            return "https://u3alinuxfunctions.azurewebsites.net/api/" + functionName;
-        }
-    } // getURL
-
 });
+
+
+
+function getURL(functionName) {
+    var url = document.URL;
+    if (url.startsWith("http://localhost")) {
+        return "http://localhost:7071/api/" + functionName;
+    }
+    else {
+        return "https://u3alinuxfunctions.azurewebsites.net/api/" + functionName;
+    }
+} // getURL
+
