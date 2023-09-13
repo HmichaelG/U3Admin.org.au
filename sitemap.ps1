@@ -21,7 +21,7 @@ function wrap
 
     process
     {
-        if ($extensions -contains $_.extension -and ($_.name -ne $index) )
+        if ($extensions -contains $_.extension )
         {
             Write-Host $_
         "`t<url>"
