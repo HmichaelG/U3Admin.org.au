@@ -135,7 +135,7 @@ function getURL(functionName) {
         return "http://localhost:7071/api/" + functionName;
     }
     else {
-        return "https://u3alinuxfunctions.azurewebsites.net/api/" + functionName;
+        return "https://u3a-functions.azurewebsites.net/api/" + functionName;
     }
 } // getURL
 
