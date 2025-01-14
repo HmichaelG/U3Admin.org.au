@@ -131,10 +131,11 @@ window.addEventListener("load", () => {
 
 function getURL(functionName) {
     var url = document.URL;
-    if (url.startsWith("http://localhost")) {
+    if (url.startsWith("http://localhost") || url.startsWith("file:")) {
         return "http://localhost:7071/api/" + functionName;
     }
     else {
+        
         return "https://u3a-functions.azurewebsites.net/api/" + functionName;
     }
 } // getURL
