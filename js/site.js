@@ -136,7 +136,7 @@ function getURL(functionName) {
     }
     else {
         
-        return "https://u3a-functions.azurewebsites.net/api/" + functionName;
+        return "https://api.u3admin.org.au/api/" + functionName;
     }
 } // getURL
 
