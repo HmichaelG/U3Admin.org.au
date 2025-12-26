@@ -40,7 +40,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="index.html">
                 <img src="./favicon/android-chrome-512x512.png" alt="Home" height="32">
                 U3Admin</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
@@ -48,12 +48,22 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/"><span class="bi-house">&nbsp; Home</span></a></li>
-                    <li class="nav-item"><span id="menu-link-4"></span></li>
-                    <li class="nav-item"><span id="menu-link-3"></span></li>
-                    <li class="nav-item"><span id="menu-link-2"></span></li>
-                    <li class="nav-item"><span id="menu-link-1"></span></li>
-                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><span class="bi-house">&nbsp; Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="u3a-administration-software.html">Administration Website</a></li>
+                          <li><a class="dropdown-item" href="u3a-member-portal.html">Member Portal</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="gallery.html">Image Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#users">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -64,38 +74,28 @@
 
     <section class="subheader-section bg-secondary">
         <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 align-bottom justify-content-start text-center">
-                <div class="col-lg-8 mx-auto align-self-end">
-                    <h1 class="h4 text-white font-weight-bold"><span id="title"></span></h1>
+            <div class="row gx-4 gx-lg-5 align-bottom justify-content-start">
+                <div class="col-lg-10 mx-auto">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent mb-2">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Home</a></li>
+                            <li class="breadcrumb-item"><a href="features.html" class="text-white-50">Features</a></li>
+                            <li class="breadcrumb-item text-white" aria-current="page">Introduction</li>
+                        </ol>
+                    </nav>
+                    <h1 class="h2 text-white font-weight-bold">An Introduction to U3Admin</h1>
+                    <p class="text-white-75 mt-3"><em>Note: This page has been consolidated into our <a href="features.html" class="text-white">Features page</a> for easier navigation.</em></p>
                 </div>
             </div>
         </div>
     </section>
-    <script>
-        // 
-        e = document.getElementById("menu-link-2");
-        a = document.createElement('a');
-        a.href = "u3a-administration-software.html";
-        a.innerHTML = "U3A Administration Website";
-        a.classList.add("nav-link");
-        e.appendChild(a);
-        // 
-        e = document.getElementById("menu-link-1");
-        a = document.createElement('a');
-        a.href = "u3a-member-portal.html";
-        a.innerHTML = "U3A Member Portal";
-        a.classList.add("nav-link");
-        e.appendChild(a);
-        // 
-        document.getElementById("title").innerHTML = 'An introduction to our software';
-    </script>
 
     <!-- question 1-->
     <section class="page-section-xs bg-white" tabindex="-1">
         <div class="container col-lg-8 mx-auto px-4 px-lg-5">
             <div class="justify-content-center">
                 <div class="text-left">
-                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="../assets/img/lady-lq.jpg"
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="assets/img/lady-lq.jpg"
                             alt="Our U3A hero"></div>
                 </div>
                 <p class="pt-4">
@@ -128,7 +128,7 @@
                 </div>
                 <figure>
                     <figcaption class="h6 col-10 pt-4">A member's detail</figcaption>
-                    <div class="col-10 border border-5 rounded"><img class="img-fluid" src="../assets/img/person.png"
+                    <div class="col-10 border border-5 rounded"><img class="img-fluid" src="assets/img/person.png"
                             alt="Person details">
                     </div>
                 </figure>
@@ -168,7 +168,7 @@
                     Below is a graph of a typical 30 day period for one of our U3As...
                 </p>
                 <div class="border border-5 rounded mx-auto"><img class="img-fluid"
-                        src="../assets/img/reliable-email.png" alt="Reliable email">
+                        src="assets/img/reliable-email.png" alt="Reliable email">
                 </div>
                 <p>That's impressive!</p>
 
@@ -209,14 +209,14 @@
 
                 <figure>
                     <figcaption class="h6">Term definition</figcaption>
-                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="../assets/img/terms.png"
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="assets/img/terms.png"
                             alt="Term definition">
                     </div>
                 </figure>
 
                 <figure>
                     <figcaption class="h6">Class schedule</figcaption>
-                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="../assets/img/schedule.png"
+                    <div class="border border-5 rounded mx-auto"><img class="img-fluid" src="assets/img/schedule.png"
                             alt="Class schedule">
                     </div>
                 </figure>
@@ -227,7 +227,7 @@
                 <figure>
                     <figcaption class="h6">Class schedule report</figcaption>
                     <div class="border border-5 rounded mx-auto"><img class="img-fluid"
-                            src="../assets/img/class-schedule-report.png" alt="Class schedule report">
+                            src="assets/img/class-schedule-report.png" alt="Class schedule report">
                     </div>
                 </figure>
 
@@ -255,7 +255,7 @@
                 </p>
                 <figure>
                     <div class="border border-5 rounded mx-auto"><img class="img-fluid"
-                            src="../assets/img/attendance-report.png" alt="Attendance report">
+                            src="assets/img/attendance-report.png" alt="Attendance report">
                     </div>
                 </figure>
 
