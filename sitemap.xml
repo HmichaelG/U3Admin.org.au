@@ -2,32 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>http://u3admin.org.au/</loc>
-		<lastmod>2023-09-13T12:29:53Z</lastmod>
+		<lastmod>2025-12-26T12:20:16Z</lastmod>
 		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>http://u3admin.org.au/faq.html</loc>
-		<lastmod>2023-09-13T02:27:58Z</lastmod>
+		<loc>http://u3admin.org.au/FAQ.html</loc>
+		<lastmod>2025-12-26T00:34:04Z</lastmod>
+		<priority>0.00</priority>
+	</url>
+	<url>
+		<loc>http://u3admin.org.au/features.html</loc>
+		<lastmod>2025-12-26T01:15:51Z</lastmod>
+		<priority>0.00</priority>
+	</url>
+	<url>
+		<loc>http://u3admin.org.au/gallery.html</loc>
+		<lastmod>2025-12-26T01:07:07Z</lastmod>
 		<priority>0.00</priority>
 	</url>
 	<url>
 		<loc>http://u3admin.org.au/index.html</loc>
-		<lastmod>2023-09-13T02:29:27Z</lastmod>
+		<lastmod>2025-12-26T00:53:53Z</lastmod>
 		<priority>0.00</priority>
 	</url>
 	<url>
 		<loc>http://u3admin.org.au/u3a-administration-software.html</loc>
-		<lastmod>2023-09-13T02:29:04Z</lastmod>
+		<lastmod>2025-12-26T00:34:04Z</lastmod>
 		<priority>0.00</priority>
 	</url>
 	<url>
 		<loc>http://u3admin.org.au/u3a-member-portal.html</loc>
-		<lastmod>2023-09-13T02:29:27Z</lastmod>
+		<lastmod>2025-12-26T00:34:04Z</lastmod>
 		<priority>0.00</priority>
 	</url>
 	<url>
 		<loc>http://u3admin.org.au/u3a-software-introduction.html</loc>
-		<lastmod>2023-09-13T02:25:47Z</lastmod>
+		<lastmod>2025-12-26T00:34:04Z</lastmod>
 		<priority>0.00</priority>
 	</url>
 </urlset>
