@@ -1,5 +1,5 @@
 // ********** Demo URL constant **********
-const DEMO_URL = "https://demo.u3admin.org.au/";
+const DEMO_URL = "https://demo.u3admin.org.au/?tempdb=tempdb";
 
 // ********** Update demo links on page load **********
 window.addEventListener("DOMContentLoaded", () => {
