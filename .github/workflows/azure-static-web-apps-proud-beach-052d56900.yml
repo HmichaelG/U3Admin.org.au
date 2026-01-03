@@ -19,16 +19,6 @@ jobs:
         with:
           submodules: true
       
-      - name: Generate Sitemap
-        shell: pwsh
-        working-directory: ${{ github.workspace }}
-        run: "& '${{ github.workspace }}/sitemap.ps1'"
-      
-      - name: Fingerprint CSS and JS files
-        shell: pwsh
-        working-directory: ${{ github.workspace }}
-        run: "& '${{ github.workspace }}/fingerprint.ps1'"
-      
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
