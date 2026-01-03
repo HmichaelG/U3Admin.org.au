@@ -21,15 +21,13 @@ jobs:
       
       - name: Generate Sitemap
         shell: pwsh
-        run: |
-          cd ${{ github.workspace }}
-          ./sitemap.ps1
+        working-directory: ${{ github.workspace }}
+        run: ${{ github.workspace }}/sitemap.ps1
       
       - name: Fingerprint CSS and JS files
         shell: pwsh
-        run: |
-          cd ${{ github.workspace }}
-          ./fingerprint.ps1
+        working-directory: ${{ github.workspace }}
+        run: ${{ github.workspace }}/fingerprint.ps1
       
       - name: Build And Deploy
         id: builddeploy
@@ -47,9 +45,8 @@ jobs:
       
       - name: Notify Search Engines (IndexNow)
         shell: pwsh
-        run: |
-          cd ${{ github.workspace }}
-          ./indexNow.ps1
+        working-directory: ${{ github.workspace }}
+        run: ${{ github.workspace }}/indexNow.ps1
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
