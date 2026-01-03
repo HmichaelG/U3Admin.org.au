@@ -1,3 +1,13 @@
+// ********** Demo URL constant **********
+const DEMO_URL = "https://demo.u3admin.org.au/";
+
+// ********** Update demo links on page load **********
+window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('a[data-demo-link]').forEach(link => {
+        const path = link.getAttribute('data-demo-link') || '';
+        link.href = DEMO_URL + path;
+    });
+});
 
 // ********** Submit contact form **********
 
